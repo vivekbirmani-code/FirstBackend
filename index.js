@@ -1,5 +1,5 @@
 require('dotenv').config()
-const express = require('express');
+const express = require('express');  // in this line we are calling express
 const app = express();
 
 const port = 4000;  // This line will automatically go to .env file after running the code
@@ -40,9 +40,10 @@ const githubData = {
   "updated_at": "2025-06-24T09:03:15Z"
 }
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => {  // This sets up a route for when someone visits the home page (i.e., '/' means the root URL like http://localhost:3000/).
   res.send('Hello World!');
 });
+// (req, res) a callback function that runs when someone visits that route
 
 app.get('/twitter', (req, res) => {
   res.send('hiteshdotcom');
@@ -60,7 +61,7 @@ app.get('/github', (req, res) => {
     res.json(githubData)
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {  // app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`);
 });
 

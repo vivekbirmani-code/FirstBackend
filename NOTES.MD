@@ -23,7 +23,7 @@
 - Package.json
 - .env
 
-- in src we have index file, APP, constants
+- in src we have index file, App, constants
 - usually we connect database in index file
 - and all the configurations, cookie etc is in APP file
 - the constants file is very important to maintain
